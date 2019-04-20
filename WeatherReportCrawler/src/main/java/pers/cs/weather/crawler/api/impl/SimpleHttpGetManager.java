@@ -43,6 +43,7 @@ public class SimpleHttpGetManager implements HttpGetManager {
 			}
 			reader.close();
 			writer.close();
+			outputStream.close();
 		} catch (IOException e) {
 			throw new ResponseStreamWriteException("write from " + responseStream + " to " + outputStream + " occur an exception,detail is\n" + e.getMessage());
 		}

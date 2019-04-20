@@ -8,7 +8,8 @@ import org.junit.runners.Suite.SuiteClasses;
 @RunWith(Suite.class)
 @SuiteClasses({
 	SimpleHttpGetManagerTest.class,
-	SimpleCrawlerManagerTest.class
+	SimpleCrawlerManagerTest.class,
+	SimpleContentParserTest.class
 })
 public class ApiAllTest {
 

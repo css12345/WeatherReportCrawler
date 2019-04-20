@@ -17,9 +17,9 @@ public class SimpleCrawlerManagerTest {
 	public void testGetAndSaveResponseStream() throws FileNotFoundException {
 		CrawlerManager manager = new SimpleCrawlerManager(new SimpleHttpGetManager());
 		County county = new County();
-		county.setId("010101");
-		county.setName("北京");
-		county.setWeatherCode("101010100");
+		county.setId("010102");
+		county.setName("海淀");
+		county.setWeatherCode("101010200");
 		OutputStream outputStream = new FileOutputStream(new File("src/test/resources/temp/" + county.getName() + ".html"));
 		manager.getAndSaveResponseStream(county, outputStream );
 	}
