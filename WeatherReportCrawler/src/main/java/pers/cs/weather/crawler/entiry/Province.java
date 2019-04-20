@@ -2,10 +2,16 @@ package pers.cs.weather.crawler.entiry;
 
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Province {
 	private String id, name;
 	private List<City> cities;
 
+	@XmlAttribute
 	public String getId() {
 		return id;
 	}
@@ -14,6 +20,7 @@ public class Province {
 		this.id = id;
 	}
 
+	@XmlAttribute
 	public String getName() {
 		return name;
 	}
@@ -22,6 +29,7 @@ public class Province {
 		this.name = name;
 	}
 
+	@XmlElement(name = "city")
 	public List<City> getCities() {
 		return cities;
 	}
