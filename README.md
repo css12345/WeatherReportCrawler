@@ -1,0 +1,2 @@
+# WeatherReportCrawler
+一个针对七天天气预报的java爬虫，使用javafx来创建交互界面，对于要查询的地方使用apache httpclient进行网页爬取和解析，最后将相应信息反馈至界面中
