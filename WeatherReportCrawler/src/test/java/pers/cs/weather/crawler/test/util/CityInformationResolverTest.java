@@ -5,7 +5,9 @@ import static org.junit.Assert.assertNotNull;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.util.Map;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import pers.cs.weather.crawler.entiry.China;
@@ -15,9 +17,10 @@ import pers.cs.weather.crawler.entiry.Province;
 import pers.cs.weather.crawler.util.CityInformationResolver;
 
 public class CityInformationResolverTest {
+	@Ignore
 	@Test
-	public void testResolveCities() throws FileNotFoundException {
-		China china = CityInformationResolver.resolveCities();
+	public void testResolveCitiesToEntity() throws FileNotFoundException {
+		China china = CityInformationResolver.resolveCitiesToEntiry();
 		assertNotNull(china);
 		PrintWriter out = new PrintWriter(new File("src/test/resources/temp/cityInformation.txt"));
 		for(Province province:china.getProvinces()) {
@@ -31,5 +34,11 @@ public class CityInformationResolverTest {
 			}
 			out.println("----------------------------------------------------------------------");
 		}
+	}
+	
+	@Test
+	public void testResolveCitiesToMap() {
+		Map<String,County> map = CityInformationResolver.resolveCitiesToMap();
+		assertNotNull(map);
 	}
 }
