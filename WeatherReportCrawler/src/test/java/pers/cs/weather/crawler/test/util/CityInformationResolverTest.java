@@ -13,6 +13,7 @@ import org.junit.Test;
 import pers.cs.weather.crawler.entiry.China;
 import pers.cs.weather.crawler.entiry.City;
 import pers.cs.weather.crawler.entiry.County;
+import pers.cs.weather.crawler.entiry.CountyWithCityAndProvinceInformation;
 import pers.cs.weather.crawler.entiry.Province;
 import pers.cs.weather.crawler.util.CityInformationResolver;
 
@@ -38,7 +39,7 @@ public class CityInformationResolverTest {
 	
 	@Test
 	public void testResolveCitiesToMap() {
-		Map<String,County> map = CityInformationResolver.resolveCitiesToMap();
+		Map<CountyWithCityAndProvinceInformation, County> map = CityInformationResolver.resolveCitiesToMap();
 		assertNotNull(map);
 	}
 }
