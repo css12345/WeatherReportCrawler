@@ -4,7 +4,6 @@ public class CountyWithCityAndProvinceInformation {
 	private String provinceName, cityName, countyName;
 
 	public CountyWithCityAndProvinceInformation(String provinceName, String cityName, String countyName) {
-		super();
 		this.provinceName = provinceName;
 		this.cityName = cityName;
 		this.countyName = countyName;

@@ -8,6 +8,8 @@ import java.util.List;
 
 import pers.cs.weather.crawler.api.ContentParser;
 import pers.cs.weather.crawler.api.CrawlerManager;
+import pers.cs.weather.crawler.api.impl.SimpleContentParser;
+import pers.cs.weather.crawler.api.impl.SimpleCrawlerManager;
 import pers.cs.weather.crawler.entiry.County;
 import pers.cs.weather.crawler.entiry.DateWeather;
 
@@ -16,6 +18,10 @@ public class DefaultCrawler {
 	private ContentParser contentParser;
 	public static String DEFAULT_SAVE_LOCATION = "src/main/resources/queriedCountiesResponse/";
 
+	public DefaultCrawler() {
+		this(new SimpleCrawlerManager(), new SimpleContentParser());
+	}
+	
 	public DefaultCrawler(CrawlerManager crawlerManager, ContentParser contentParser) {
 		this.crawlerManager = crawlerManager;
 		this.contentParser = contentParser;
