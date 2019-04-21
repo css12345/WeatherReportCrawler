@@ -6,3 +6,4 @@
 然后定义了实体类包括China,Province,City,County分别表示国内所有省，省内所有市，市内所有县的概念，同时省、市、县包含id和name两个属性;<br>
 还有表示每日天气和每时天气两个类DateWeather和DateTimeWeather，对应于每一天的天气和这一天中某几个时间点的天气，DateWeather包含一个DateTimeWeather的列表，两个类都有对天气信息描述的熟悉。<br>
 还定义了几个异常类便于在获取天气时统一管理异常，还有两个工具类来简化操作。
+最后安装见链接：https://pan.baidu.com/s/1jXNtK1qFsadPNyby-BWKVw 提取码：b6g0 
