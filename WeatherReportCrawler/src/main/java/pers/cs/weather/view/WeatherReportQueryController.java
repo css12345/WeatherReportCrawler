@@ -83,7 +83,7 @@ public class WeatherReportQueryController implements Initializable {
 
 			@Override
 			public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-				double fixedValue = newValue.doubleValue() / dateWeathers.size();
+				double fixedValue = dateWeathers.size() == 0 ? 100 : newValue.doubleValue() / dateWeathers.size();
 				dateWeathersListView.setFixedCellSize(fixedValue);
 			}
 
@@ -93,7 +93,7 @@ public class WeatherReportQueryController implements Initializable {
 
 			@Override
 			public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
-				double fixedValue = newValue.doubleValue() / dateTimeWeathers.size();
+				double fixedValue = dateTimeWeathers.size() == 0 ? 100 : newValue.doubleValue() / dateTimeWeathers.size();
 				dateTimeWeathersListView.setFixedCellSize(fixedValue);
 			}
 		});
