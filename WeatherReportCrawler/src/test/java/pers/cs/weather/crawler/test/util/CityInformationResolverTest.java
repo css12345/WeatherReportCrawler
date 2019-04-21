@@ -5,7 +5,6 @@ import static org.junit.Assert.assertNotNull;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
-import java.util.Map;
 
 import org.junit.Ignore;
 import org.junit.Test;
@@ -13,7 +12,6 @@ import org.junit.Test;
 import pers.cs.weather.crawler.entiry.China;
 import pers.cs.weather.crawler.entiry.City;
 import pers.cs.weather.crawler.entiry.County;
-import pers.cs.weather.crawler.entiry.CountyWithCityAndProvinceInformation;
 import pers.cs.weather.crawler.entiry.Province;
 import pers.cs.weather.crawler.util.CityInformationResolver;
 
@@ -35,11 +33,5 @@ public class CityInformationResolverTest {
 			}
 			out.println("----------------------------------------------------------------------");
 		}
-	}
-	
-	@Test
-	public void testResolveCitiesToMap() {
-		Map<CountyWithCityAndProvinceInformation, County> map = CityInformationResolver.resolveCitiesToMap();
-		assertNotNull(map);
 	}
 }

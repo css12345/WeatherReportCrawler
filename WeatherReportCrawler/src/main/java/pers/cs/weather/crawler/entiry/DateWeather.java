@@ -80,9 +80,17 @@ public class DateWeather {
 
 	@Override
 	public String toString() {
-		return "DateWeather [date=" + date + ", dateDescription=" + dateDescription + ", weatherDescription="
-				+ weatherDescription + ", temperatureDescription=" + temperatureDescription + ", windDescription="
-				+ windDescription + ", dateTimeWeathers=" + dateTimeWeathers + "]";
+		
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.append(date +"(" + dateDescription + ")" + "\n");
+		stringBuilder.append(temperatureDescription + "\n");
+		stringBuilder.append(weatherDescription + "\n");
+		stringBuilder.append(windDescription + "\n");
+		return stringBuilder.toString();
+		
+//		return "DateWeather [date=" + date + ", dateDescription=" + dateDescription + ", weatherDescription="
+//				+ weatherDescription + ", temperatureDescription=" + temperatureDescription + ", windDescription="
+//				+ windDescription + ", dateTimeWeathers=" + dateTimeWeathers + "]";
 	}
 
 	@Override

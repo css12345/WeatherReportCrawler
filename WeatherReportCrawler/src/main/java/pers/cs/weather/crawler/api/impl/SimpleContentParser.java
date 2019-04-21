@@ -156,7 +156,10 @@ public class SimpleContentParser implements ContentParser {
 				else {
 					String string = plainText.substring(0, indexOfLine);
 					int endIndex = string.indexOf("℃");
-					maxTemperature = Integer.parseInt(string.substring(0,endIndex));
+					if(endIndex == -1)
+						maxTemperature = Integer.parseInt(string);
+					else
+						maxTemperature = Integer.parseInt(string.substring(0,endIndex));
 					
 					string = plainText.substring(indexOfLine + 1);
 					endIndex = string.indexOf("℃");

@@ -60,9 +60,16 @@ public class DateTimeWeather {
 
 	@Override
 	public String toString() {
-		return "DateTimeWeather [dateTime=" + dateTime + ", weatherDescription=" + weatherDescription
-				+ ", temperatureDescription=" + temperatureDescription + ", windDirection=" + windDirection
-				+ ", windSizeDescription=" + windSizeDescription + "]";
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.append(dateTime + "\n");
+		stringBuilder.append(temperatureDescription + "\n");
+		stringBuilder.append(weatherDescription + "\n");
+		stringBuilder.append(windDirection + "\n");
+		stringBuilder.append(windSizeDescription + "\n");
+		return stringBuilder.toString();
+//		return "DateTimeWeather [dateTime=" + dateTime + ", weatherDescription=" + weatherDescription
+//				+ ", temperatureDescription=" + temperatureDescription + ", windDirection=" + windDirection
+//				+ ", windSizeDescription=" + windSizeDescription + "]";
 	}
 
 	@Override
@@ -116,5 +123,5 @@ public class DateTimeWeather {
 			return false;
 		return true;
 	}
-	
+
 }
